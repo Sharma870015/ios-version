@@ -1,0 +1,59 @@
+/* SuccessModal.css */
+
+.success-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.success-modal {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transform: scale(0);
+  animation: scale-up 0.3s forwards;
+  max-width: 300px;
+  width: 80%;
+}
+
+@keyframes scale-up {
+  to {
+    transform: scale(1);
+  }
+}
+
+.success-modal p {
+  margin: 0;
+  font-size: 20px;
+  color: #4caf50;
+  font-weight: bold;
+}
+
+.success-modal .close-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: linear-gradient(to right, #4caf50, #81c784);
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.success-modal .close-button:hover {
+  background: linear-gradient(to right, #388e3c, #66bb6a);
+  transform: translateY(-3px);
+}
+
+.success-modal .close-button:active {
+  transform: translateY(0);
+}

@@ -1,0 +1,211 @@
+/* Add a gradient background color and style for the login container */
+@keyframes gradientAnimation {
+  0% { background-position: 0% 0%; }
+  50% { background-position: 100% 100%; }
+  100% { background-position: 0% 0%; }
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(45deg, #ff9a9e, #fad0c4, #a2c2e8, #c2e2e8);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+  padding: 20px; /* Added padding for smaller screens */
+}
+
+.welcome-section {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.welcome-section h1 {
+  font-size: 2.5rem; /* Responsive font size */
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.welcome-section p {
+  font-size: 1.125rem; /* Responsive font size */
+  margin: 0;
+  font-weight: 300;
+}
+
+.welcome-section .welcome-image {
+  width: 100%;
+  max-width: 300px;
+  margin-top: 15px;
+}
+
+.login-box {
+  background-color: #ffffff;
+  padding: 20px; /* Adjusted padding for better spacing */
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px; /* Ensure box does not exceed this width */
+  margin: 0 auto;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.for-Login {
+  font-size: 1.5rem; /* Responsive font size */
+  margin-bottom: 20px;
+  color: #333;
+  font-weight: 600;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.for-padding {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+.for-padding:focus {
+  border-color: #4a90e2;
+  outline: none;
+}
+
+.login-button, .forgot-password-button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem; /* Responsive font size */
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.login-button {
+  background-color: #4a90e2;
+  color: #fff;
+  margin-top: 10px;
+}
+
+.login-button:hover {
+  background-color: #357ab7;
+  transform: scale(1.05);
+}
+
+.forgot-password-button {
+  background-color: #f5f5f5;
+  color: #333;
+  margin-top: 10px;
+}
+
+.forgot-password-button:hover {
+  background-color: #e0e0e0;
+  transform: scale(1.05);
+}
+
+.quote-section {
+  text-align: center;
+  color: #fff;
+  margin-top: 100px;
+  font-weight: 300;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.quote-section h3 {
+  font-size: 1.75rem; /* Responsive font size */
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.quote-section p {
+  font-size: 1.125rem; /* Responsive font size */
+  font-style: italic;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .welcome-section h1 {
+    font-size: 2rem;
+  }
+
+  .welcome-section p {
+    font-size: 1rem;
+  }
+
+  .login-box {
+    padding: 15px;
+  }
+
+  .for-Login {
+    font-size: 1.25rem;
+  }
+
+  .login-button, .forgot-password-button {
+    font-size: 0.875rem;
+    padding: 10px;
+  }
+
+  .quote-section h3 {
+    font-size: 1.5rem;
+  }
+
+  .quote-section p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .welcome-section h1 {
+    font-size: 1.75rem;
+  }
+
+  .welcome-section p {
+    font-size: 0.875rem;
+  }
+
+  .login-box {
+    width: 95%;
+    padding: 10px;
+  }
+
+  .for-Login {
+    font-size: 1.125rem;
+  }
+
+  .login-button, .forgot-password-button {
+    font-size: 0.75rem;
+    padding: 8px;
+  }
+
+  .quote-section h3 {
+    font-size: 1.25rem;
+  }
+
+  .quote-section p {
+    font-size: 0.875rem;
+  }
+}
+
+.error-message {
+  color: #e74c3c;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+.login-box {
+  margin-top: 50px;
+}
